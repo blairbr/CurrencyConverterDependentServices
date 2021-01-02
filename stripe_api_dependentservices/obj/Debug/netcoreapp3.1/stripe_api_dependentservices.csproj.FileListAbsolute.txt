@@ -10,7 +10,6 @@ C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentser
 C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\bin\Debug\netcoreapp3.1\stripe_api_dependentservices.Views.dll
 C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\bin\Debug\netcoreapp3.1\stripe_api_dependentservices.Views.pdb
 C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\obj\Debug\netcoreapp3.1\stripe_api_dependentservices.csprojAssemblyReference.cache
-C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\obj\Debug\netcoreapp3.1\stripe_api_dependentservices.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\obj\Debug\netcoreapp3.1\stripe_api_dependentservices.RazorAssemblyInfo.cache
 C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\obj\Debug\netcoreapp3.1\stripe_api_dependentservices.RazorAssemblyInfo.cs
 C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\obj\Debug\netcoreapp3.1\stripe_api_dependentservices.AssemblyInfoInputs.cache
