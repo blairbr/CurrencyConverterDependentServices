@@ -34,3 +34,4 @@ C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentser
 C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\obj\Debug\netcoreapp3.1\CurrencyConverter.Views.pdb
 C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\obj\Debug\netcoreapp3.1\CurrencyConverter.dll
 C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\obj\Debug\netcoreapp3.1\CurrencyConverter.pdb
+C:\Users\Blair\source\repos\stripe_api_dependentservices\stripe_api_dependentservices\obj\Debug\netcoreapp3.1\CurrencyConverter.csprojAssemblyReference.cache
