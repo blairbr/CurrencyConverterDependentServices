@@ -9,13 +9,10 @@ namespace stripe_api_dependentservices.Controllers
 {
     public class HomeController : Controller
     {
-        //properties
-        private readonly ILogger<HomeController> _logger;
         private readonly ICurrencyExchangeService _apiService;
 
-        public HomeController(ILogger<HomeController> logger, ICurrencyExchangeService apiService)
+        public HomeController(ICurrencyExchangeService apiService)
         {
-            _logger = logger;
             _apiService = apiService;
         }
 
@@ -23,13 +20,15 @@ namespace stripe_api_dependentservices.Controllers
         {
             var currencies = await _apiService.GetAllCurrenciesAsync();
             return View(currencies);
-            //comment
         }
 
         [HttpPost]
         public ActionResult Submit(CurrencyModel formData) 
         {
-            //formData.ConversionRate = _apiService.FindConversionRate(formData.TargetCurrencyCode); //if i do something like this, I'm making a second call to the API. There has to be a better way. I think my setup isn't good
+            var codeAndRate = formData.CodeAndRate.Split(" - ");
+            formData.TargetCurrencyCode = codeAndRate[0];
+            formData.ConversionRate = decimal.Parse(codeAndRate[1]);
+
             CurrencyModel formDataModelWithFinalAmount = _apiService.CalculateValueInTargetCurrency(formData);
             CurrencyModel formDataFinal = _apiService.PopulateModel(formDataModelWithFinalAmount);
             return PartialView("~/Views/Shared/_totalInTargetCurrencyMessage.cshtml", formDataFinal);

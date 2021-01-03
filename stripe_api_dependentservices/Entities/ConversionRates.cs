@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using stripe_api_dependentservices.Models;
+using System.Collections.Generic;
 
 namespace stripe_api_dependentservices.Entities
 {
