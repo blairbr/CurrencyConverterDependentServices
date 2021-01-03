@@ -9,10 +9,5 @@ namespace stripe_api_dependentservices.Entities
 
         public Dictionary<string, string> Conversion_rates { get; set; }
 
-        public Object Coversion_rates { get; set; }
-
-     //   public string Target_code { get; set; }
-
-     //   public string conversion_rate { get; set; }
     }
 }
