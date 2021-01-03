@@ -23,6 +23,7 @@ namespace stripe_api_dependentservices.Controllers
         {
             var currencies = await _apiService.GetAllCurrenciesAsync();
             return View(currencies);
+            //comment
         }
 
         [HttpPost]
