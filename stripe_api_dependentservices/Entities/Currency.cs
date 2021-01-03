@@ -9,5 +9,7 @@ namespace stripe_api_dependentservices.Entities
 
         public Dictionary<string, string> Conversion_rates { get; set; }
 
+        public double ConvertedValue { get; set; }
+
     }
 }

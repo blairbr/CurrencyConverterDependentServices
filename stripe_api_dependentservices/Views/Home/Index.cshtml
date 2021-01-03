@@ -3,15 +3,27 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <div class="text-center">
+        <h1 class="display-4">Currency Converter</h1>
 
-    @foreach (var conversionRate in Model.Conversion_rates)
-    { 
-<ul>
-    <li> @conversionRate.Key </li>
-    <li> @conversionRate.Value </li>
-</ul>
-    }
+        @using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+        {
 
-</div>
+         <label for="AmountToBeConverted">Enter the amount to be converted in USD: </label>
+        <input type="number" id="AmountToBeConverted" name="AmountToBeConverted" min="1" max="999999">
+        <br />
+        <div class="currency-dropdown">
+            @Html.DropDownList("TargetCurrencyCode", new SelectList(Model.Conversion_rates.Keys), "Select Currency", new { @id = "TargetCurrencyCode" })
+        </div>
+        <br />
+  
+        <button type="submit" value="Submit" class="btn btn-primary"> Convert </button>
+        <br />
+        }
+        
+
+        @*have to figure out the best way to look up the conversion value*@ 
+
+    </div>
+
+
