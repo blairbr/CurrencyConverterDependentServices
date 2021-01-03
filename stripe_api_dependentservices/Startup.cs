@@ -1,13 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using stripe_api_dependentservices.Services;
+using stripe_api_dependentservices.Data;
 
 namespace stripe_api_dependentservices
 {
@@ -23,6 +21,8 @@ namespace stripe_api_dependentservices
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<ICurrencyExchangeService, CurrencyExchangeService>();
+            services.AddSingleton<ICurrencyConversionApiProvider, CurrencyConversionApiProvider>();
             services.AddControllersWithViews();
         }
 

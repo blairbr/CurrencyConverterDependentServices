@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace stripe_api_dependentservices.Entities
 {
@@ -10,5 +8,11 @@ namespace stripe_api_dependentservices.Entities
         public string Base_code { get; set; }
 
         public Dictionary<string, string> Conversion_rates { get; set; }
+
+        public Object Coversion_rates { get; set; }
+
+     //   public string Target_code { get; set; }
+
+     //   public string conversion_rate { get; set; }
     }
 }

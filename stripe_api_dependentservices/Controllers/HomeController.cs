@@ -28,7 +28,7 @@ namespace stripe_api_dependentservices.Controllers
         {
             //controller -> service -> api provider type class
             var currencies = await _apiService.GetAllCurrenciesAsync();
-            return View();
+            return View(currencies);
         }
 
         public IActionResult Privacy()
