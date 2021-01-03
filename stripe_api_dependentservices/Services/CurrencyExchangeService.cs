@@ -2,7 +2,6 @@
 using stripe_api_dependentservices.Entities;
 using stripe_api_dependentservices.Data;
 using stripe_api_dependentservices.Models;
-using Microsoft.AspNetCore.Mvc;
 
 namespace stripe_api_dependentservices.Services
 {
@@ -15,12 +14,11 @@ namespace stripe_api_dependentservices.Services
             _apiProvider = apiProvider;
         }
 
-        //make a async method that returns a Task<List<Currency>> that gets all currencies
-        public async Task<Currency> GetAllCurrenciesAsync() {
-            var currencies = await _apiProvider.GetCurrenciesAsync();
+        public async Task<ConversionRates> GetAllCurrenciesAsync() {
+            var currencies = await _apiProvider.GetConversionRatesAsync();
             return currencies;
         }
-        //why are actionresult
+
         public FormDataModel CalculateValueInTargetCurrency(FormDataModel formDataModel)
         {
             formDataModel.FinalAmountInTargetCurrency = formDataModel.AmountToBeConverted * formDataModel.ConversionRate;

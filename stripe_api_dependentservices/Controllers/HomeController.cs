@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -22,11 +19,8 @@ namespace stripe_api_dependentservices.Controllers
             _apiService = apiService;
         }
 
-
-        // make this async and explain why
         public async Task<IActionResult> Index()
         {
-            //controller -> service -> api provider type class
             var currencies = await _apiService.GetAllCurrenciesAsync();
             return View(currencies);
         }

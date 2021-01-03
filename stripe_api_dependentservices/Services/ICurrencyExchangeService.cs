@@ -8,7 +8,7 @@ namespace stripe_api_dependentservices.Services
     {
         //stubbed out methods like GetAllCurrencies.
         //anything that's async needs to return a Task, right?
-        Task<Currency> GetAllCurrenciesAsync();
+        Task<ConversionRates> GetAllCurrenciesAsync();
 
         FormDataModel PopulateModel(FormDataModel formDataModel);
         FormDataModel CalculateValueInTargetCurrency(FormDataModel formDataModel);

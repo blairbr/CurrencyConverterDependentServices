@@ -5,6 +5,6 @@ namespace stripe_api_dependentservices.Data
 {
     public interface ICurrencyConversionApiProvider
     {
-        public Task<Currency> GetCurrenciesAsync();
+        public Task<ConversionRates> GetConversionRatesAsync();
     }
 }
