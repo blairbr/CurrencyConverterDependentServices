@@ -19,15 +19,15 @@ namespace stripe_api_dependentservices.Services
             return currencies;
         }
 
-        public FormDataModel CalculateValueInTargetCurrency(FormDataModel formDataModel)
+        public CurrencyModel CalculateValueInTargetCurrency(CurrencyModel formDataModel)
         {
             formDataModel.FinalAmountInTargetCurrency = formDataModel.AmountToBeConverted * formDataModel.ConversionRate;
             return formDataModel;
         }
 
-        public FormDataModel PopulateModel(FormDataModel formDataModel)
+        public CurrencyModel PopulateModel(CurrencyModel formDataModel)
         {
-            FormDataModel newFormDataModel = new FormDataModel()
+            CurrencyModel newFormDataModel = new CurrencyModel()
             {
                 //only need these two properties... perhaps could return a string of them mashed together instead...
                 FinalAmountInTargetCurrency = formDataModel.FinalAmountInTargetCurrency,

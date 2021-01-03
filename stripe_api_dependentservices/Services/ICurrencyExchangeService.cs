@@ -10,7 +10,7 @@ namespace stripe_api_dependentservices.Services
         //anything that's async needs to return a Task, right?
         Task<ConversionRates> GetAllCurrenciesAsync();
 
-        FormDataModel PopulateModel(FormDataModel formDataModel);
-        FormDataModel CalculateValueInTargetCurrency(FormDataModel formDataModel);
+        CurrencyModel PopulateModel(CurrencyModel formDataModel);
+        CurrencyModel CalculateValueInTargetCurrency(CurrencyModel formDataModel);
     }
 }

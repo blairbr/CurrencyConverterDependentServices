@@ -13,7 +13,7 @@
         <input type="number" id="AmountToBeConverted" name="AmountToBeConverted" min="1" max="999999">
         <br />
         <div class="currency-dropdown">
-            @Html.DropDownList("TargetCurrencyCode", new SelectList(Model.Conversion_rates.Keys), "Select Currency", new { @id = "TargetCurrencyCode" })
+            @Html.DropDownList("TargetCurrencyCode", new SelectList(Model.Conversion_rates.Keys), "Select Target Currency", new { @id = "TargetCurrencyCode" })
         </div>
         <br />
   

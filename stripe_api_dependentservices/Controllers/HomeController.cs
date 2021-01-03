@@ -26,11 +26,11 @@ namespace stripe_api_dependentservices.Controllers
         }
 
         [HttpPost]
-        public ActionResult Submit(FormDataModel formData) 
+        public ActionResult Submit(CurrencyModel formData) 
         {
             //formData.ConversionRate = _apiService.FindConversionRate(formData.TargetCurrencyCode); //if i do something like this, I'm making a second call to the API. There has to be a better way. I think my setup isn't good
-            FormDataModel formDataModelWithFinalAmount = _apiService.CalculateValueInTargetCurrency(formData);
-            FormDataModel formDataFinal = _apiService.PopulateModel(formDataModelWithFinalAmount);
+            CurrencyModel formDataModelWithFinalAmount = _apiService.CalculateValueInTargetCurrency(formData);
+            CurrencyModel formDataFinal = _apiService.PopulateModel(formDataModelWithFinalAmount);
             return PartialView("~/Views/Shared/_totalInTargetCurrencyMessage.cshtml", formDataFinal);
         }
 
